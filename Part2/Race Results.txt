@@ -1,0 +1,24 @@
+Length of track + 10m 
+The winner: cOW
+confidence: 0.7
+distance travelled: 10
+Time taken: 4.02 seconds
+The  of the other horses' stats are: 
+Frank (^)  has a confidence of 0.5
+------------------------------------------------------------
+Length of track + 20m 
+The winner: Bob
+confidence: 0.6
+distance travelled: 20
+Time taken: 5.71 seconds
+The  of the other horses' stats are: 
+name (&)  has a confidence of 0.7
+------------------------------------------------------------
+Length of track + 20m 
+The winner: name
+confidence: 0.3
+distance travelled: 20
+Time taken: 24.642 seconds
+The  of the other horses' stats are: 
+Bob (%)  has a confidence of 0.4
+------------------------------------------------------------
