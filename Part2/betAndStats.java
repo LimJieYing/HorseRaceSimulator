@@ -100,6 +100,7 @@ public class betAndStats {
                                 // Stop the Timer
                                 ((Timer)e.getSource()).stop();
 
+                                textArea.append("\n");
                                 textArea.append("Bets: \n");
 
                                 if (users == null || users.isEmpty() || bets == null || bets.isEmpty()){
