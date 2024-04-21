@@ -10,10 +10,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener; 
 
 /**
- * A three-horse race, each horse running in its own lane
+ * A Multiple lane race, each horse running in its own lane
  * for a given distance
- * 
- * @author McFarewell
+ * Updated to be printed out in the GUI
+ *
+ * @author Lim Jie Ying
  * @version 1.0
  */
 public class Race {
