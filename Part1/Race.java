@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A three-horse race, each horse running in its own lane
+ * A multiple lane horse race, each horse running in its own lane
  * for a given distance
  * 
- * @author McFarewell
+ * @author Lim Jie Ying
  * @version 1.0
  */
 public class Race {
