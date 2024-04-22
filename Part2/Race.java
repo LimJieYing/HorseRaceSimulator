@@ -243,11 +243,11 @@ public class Race {
             textArea.append("|");
 
             //spaces before horse
-            multiplePrintGUI(' ', spacesBefore *2 - 1);
+            multiplePrintGUI(' ', spacesBefore *2 - 2);
 
             //if fallen print X else print accesory and breed char 
             if (theHorse.hasFallen()) {
-                textArea.append(" X ");
+                textArea.append("   X  ");
             } else {
                 textArea.append(theHorse.getAccesory() + theHorse.getBreed());
             }
