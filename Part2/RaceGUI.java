@@ -263,7 +263,7 @@ public class RaceGUI {
 
                 }
                 
-                    betAndStats betStats = new betAndStats(new_race); // Create a betAndStats object
+                    betAndStats betStats = new betAndStats(new_race); // Create a betAndStats object to allow betting and display of horse stats
                     betStats.displayHorseStats();
 
             }
