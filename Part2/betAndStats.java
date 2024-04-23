@@ -259,7 +259,13 @@ public class betAndStats {
 
             for (user user : users) {
                 if (!winningUsers.contains(user)) {
-                    user.removeBalance(deductionAmount);
+                    if(user.getBalance() >= 0){
+                        user.removeBalance(deductionAmount);
+                    }
+                    else{
+                        textArea.append( user.toString() + " is bankrupt and is out of the game." + "\n");
+                        user.bankrupt();
+                    }
                 }
             }
         
