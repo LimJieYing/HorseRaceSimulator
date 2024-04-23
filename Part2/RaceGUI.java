@@ -39,7 +39,7 @@ public class RaceGUI {
                     JFrame ResultsFrame = new JFrame();
                     ResultsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     ResultsFrame.setTitle("Race History");
-                    ResultsFrame.setSize(800, 800);
+                    ResultsFrame.setSize(900, 800);
                     ResultsFrame.setResizable(true);
 
                     String current;
@@ -78,6 +78,7 @@ public class RaceGUI {
         RacePanel.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 5));
         RacePanel.setBounds(50, 70, 700, 60);
 
+        RacePanel.setBorder(BorderFactory.createLineBorder(Color.GREEN));
         RacePanel.setBackground(Color.LIGHT_GRAY);
 
         JLabel track_nunberLabel = new JLabel("Number of tracks: ");
