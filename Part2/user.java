@@ -1,6 +1,7 @@
 public class user {
     String name;
     int balance;
+    boolean isBankrupt = false;
 
     public user(String name){
         this.name = name;
@@ -8,11 +9,15 @@ public class user {
     }
 
     public void addBalance(int amount){
-        this.balance += amount;
+        if(!isBankrupt){
+            this.balance += amount;
+        }
     }
 
     public void removeBalance(int amount){
-        this.balance -= amount;
+        if(!isBankrupt){
+            this.balance -= amount;
+        }
     }
 
     public String toString() {
@@ -21,5 +26,9 @@ public class user {
 
     public int getBalance(){
         return this.balance;
+    }
+
+    public void bankrupt(){
+        this.isBankrupt = true;
     }
 }
