@@ -79,6 +79,7 @@ public class betAndStats {
 
         //Start button (bottom left)
         JButton Start = new JButton("Start Race");
+        Start.setBorder(BorderFactory.createLineBorder(Color.CYAN, 10));
         Start.setBackground(Color.GREEN);
         Start.setFont(new Font("Comic Sans MS", Font.BOLD, 30));
 
@@ -136,7 +137,7 @@ public class betAndStats {
 
         // Betting Panel (bottom right)
         JPanel bettingPanel = new JPanel(new GridLayout(0, 2, 10, 10));
-        bettingPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        bettingPanel.setBorder(BorderFactory.createEmptyBorder(5, 15, 5, 15));
         bettingPanel.setLayout(new GridLayout(0, 1, 10, 10));
         
 
