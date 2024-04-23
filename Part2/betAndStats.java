@@ -50,19 +50,21 @@ public class betAndStats {
             } else {
                 String currentName = horse.getName();
                 double currentConfidence = horse.getConfidence();
-                int probability = (int) (0.1 * currentConfidence * currentConfidence *100);
+                double probability = 0.1 * currentConfidence * currentConfidence *10000;
+                int probabilityInt = (int) probability;
+                double probabilityRounded = probabilityInt / 100.0;
                 
                 if (currentConfidence < 0.5) {
                     textArea.append(currentName + " is very slow has a low probability to Fall! with a probability of "
-                            + probability + "%" + "\n");
+                            + probabilityRounded + "%" + "\n");
                 } else if (currentConfidence >= 0.5 && currentConfidence < 0.8) {
                     textArea.append(
                             currentName + " is fast and has a medium probability to Fall! with a probability of "
-                                    + probability + "%" + "\n");
+                                    + probabilityRounded + "%" + "\n");
                 } else {
                     textArea.append(
                             currentName + " is very fast but has a high probability to Fall! with a probability of "
-                                    + probability + "%" + "\n");
+                                    + probabilityRounded + "%" + "\n");
                 }
                 textArea.append("\n");
             }
