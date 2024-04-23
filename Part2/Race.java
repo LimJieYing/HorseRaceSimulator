@@ -276,22 +276,31 @@ public class Race {
 
         try (PrintWriter results = new PrintWriter(new FileWriter("Race Results.txt", true))) {
 
-            results.write("Length of track + " + this.raceLength + "m " + "\n");
+            double speed = (this.raceLength / timeTaken)* 100;
+            int speedRoundedint = (int) Math.round(speed);
+            double speedRounded = (double) speedRoundedint / 100;
+            
+            results.write("Length of track: " + this.raceLength + "m " + "\n");
             results.write("The winner: " + winner.getName() + "\n");
             results.write("confidence: " + winner.getConfidence() + "\n");
             results.write("distance travelled: " + winner.getDistanceTravelled() + "\n");
             results.write("Time taken: " + timeTaken + " seconds" + "\n");
+            results.write("Speed: " + speedRounded + "m/s" + "\n");
 
-            results.write("The  of the other horses' stats are: " + "\n");
+            results.write("The  other horses' stats are: " + "\n");
 
             for (int i = 0; i < horses.size(); i++) {
                 if (horses.get(i) != null && !horses.get(i).getName().equals(winner.getName())) {
-                    results.write(horses.get(i).getName() + " (" + horses.get(i).getSymbol() + ") "
-                            + " has a confidence of " + horses.get(i).getConfidence() + "\n");
+
+                    double speedOther = (horses.get(i).getDistanceTravelled() / timeTaken)* 100;
+                    int speedRoundedintOther = (int) Math.round(speedOther);
+                    double speedRoundedOther = (double) speedRoundedintOther / 100;
+
+                    results.write(horses.get(i).getName() + " (" + horses.get(i).getSymbol() + ") " + " has a confidence of " + horses.get(i).getConfidence() + " and travelled a distance of " + horses.get(i).getDistanceTravelled() + " with a speed of " + speedRoundedOther + "m/s." + "\n");
 
                 }
             }
-            results.write("------------------------------------------------------------" + "\n");
+            results.write("---------------------------------------------------------------------------------------------------------------------" + "\n");
             results.close();
         } catch (IOException e) {
             System.out.println("An error occured");
