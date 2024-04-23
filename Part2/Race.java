@@ -282,7 +282,7 @@ public class Race {
             
             results.write("Length of track: " + this.raceLength + "m " + "\n");
             results.write("The winner: " + winner.getName() + "\n");
-            results.write("confidence: " + winner.getConfidence() + "\n");
+            results.write("confidence: " + Math.round(winner.getConfidence()) + "\n");
             results.write("distance travelled: " + winner.getDistanceTravelled() + "\n");
             results.write("Time taken: " + timeTaken + " seconds" + "\n");
             results.write("Speed: " + speedRounded + "m/s" + "\n");
@@ -295,8 +295,9 @@ public class Race {
                     double speedOther = (horses.get(i).getDistanceTravelled() / timeTaken)* 100;
                     int speedRoundedintOther = (int) Math.round(speedOther);
                     double speedRoundedOther = (double) speedRoundedintOther / 100;
+                    double confidenceRounded =  Math.round(horses.get(i).getConfidence());
 
-                    results.write(horses.get(i).getName() + " (" + horses.get(i).getSymbol() + ") " + " has a confidence of " + horses.get(i).getConfidence() + " and travelled a distance of " + horses.get(i).getDistanceTravelled() + " with a speed of " + speedRoundedOther + "m/s." + "\n");
+                    results.write(horses.get(i).getName() + " (" + horses.get(i).getSymbol() + ") " + " has a confidence of " + confidenceRounded + " and travelled a distance of " + horses.get(i).getDistanceTravelled() + " with a speed of " + speedRoundedOther + "m/s." + "\n");
 
                 }
             }
