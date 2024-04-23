@@ -81,7 +81,7 @@ public class RaceGUI {
         RacePanel.setBorder(BorderFactory.createLineBorder(Color.GREEN));
         RacePanel.setBackground(Color.LIGHT_GRAY);
 
-        JLabel track_nunberLabel = new JLabel("Number of tracks: ");
+        JLabel track_nunberLabel = new JLabel("Number of lanes: ");
         RacePanel.add(track_nunberLabel);
 
         SpinnerNumberModel track_selector = new SpinnerNumberModel(1,1,10,1);
@@ -89,13 +89,13 @@ public class RaceGUI {
         track_numberInput.setPreferredSize(new Dimension(60, 25));
         RacePanel.add(track_numberInput);
 
-        JLabel lengthLabel = new JLabel("Length of Track:");
+        JLabel lengthLabel = new JLabel("Length of track:");
         RacePanel.add(lengthLabel);
 
         JTextField length_Input = new JTextField(10);
         RacePanel.add(length_Input);
 
-        JLabel unitLabel = new JLabel("Unit of Length:");
+        JLabel unitLabel = new JLabel("Unit of length:");
         RacePanel.add(unitLabel);
 
         JTextField unit_Input = new JTextField(10);
