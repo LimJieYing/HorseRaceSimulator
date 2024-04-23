@@ -76,7 +76,7 @@ public class RaceGUI {
         // *******RACE PANEL********
         JPanel RacePanel = new JPanel();
         RacePanel.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 5));
-        RacePanel.setBounds(50, 70, 700, 60);
+        RacePanel.setBounds(50, 70, 700, 70);
 
         RacePanel.setBorder(BorderFactory.createLineBorder(Color.GREEN));
         RacePanel.setBackground(Color.LIGHT_GRAY);
@@ -84,7 +84,9 @@ public class RaceGUI {
         JLabel track_nunberLabel = new JLabel("Number of tracks: ");
         RacePanel.add(track_nunberLabel);
 
-        JTextField track_numberInput = new JTextField(10);
+        SpinnerNumberModel track_selector = new SpinnerNumberModel(1,1,10,1);
+        JSpinner track_numberInput = new JSpinner(track_selector);
+        track_numberInput.setPreferredSize(new Dimension(60, 25));
         RacePanel.add(track_numberInput);
 
         JLabel lengthLabel = new JLabel("Length of Track:");
@@ -123,8 +125,8 @@ public class RaceGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                if(length_Input.getText().isEmpty() || track_numberInput.getText().isEmpty()){
-                    JOptionPane.showMessageDialog(frame, "Please fill in the number of tracks and the length", "Error", JOptionPane.ERROR_MESSAGE);
+                if(length_Input.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(frame, "Please fill in the length", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
                 else{
@@ -132,7 +134,7 @@ public class RaceGUI {
                     try{
                         String unit;
                         int length = Integer.parseInt(length_Input.getText());
-                        int track_number = Integer.parseInt(track_numberInput.getText());
+                        int track_number = (Integer) track_numberInput.getValue();
                         if (unit_Input.getText().isEmpty()) {
                             unit = "N/A";
                         } else {
@@ -175,7 +177,7 @@ public class RaceGUI {
         
 
         for (int i = 0; i < track_number; i++) {
-            int y = 140 + (i * 75);
+            int y = 145 + (i * 75);
             JPanel HorsePanel = new JPanel();
             HorsePanel.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
             HorsePanel.setBounds(50, y, 800, 80);
