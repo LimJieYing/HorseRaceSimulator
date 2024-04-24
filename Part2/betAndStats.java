@@ -90,7 +90,7 @@ public class betAndStats {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    //reset Race frame
+                    //reset Race frame everytime a new race starts
                     newRace.race_frame.getContentPane().removeAll(); 
                     newRace.race_frame.repaint(); 
 
@@ -195,8 +195,9 @@ public class betAndStats {
         // Panel for user to select amount to bet
         JPanel amountPanel = new JPanel(new BorderLayout());
         JLabel amountLabel = new JLabel("Bet Amount: ");
-        JSpinner amountSpinner = new JSpinner(new SpinnerNumberModel(1, 1, 100, 1)); // Set the minimum, maximum, and
-                                                                                     // step for the spinner
+        JSpinner amountSpinner = new JSpinner(new SpinnerNumberModel(1, 1, 100, 1)); 
+
+        //add amountPanel to betting panel
         amountPanel.add(amountLabel, BorderLayout.WEST);
         amountPanel.add(amountSpinner, BorderLayout.CENTER);
         bettingPanel.add(amountPanel);
@@ -240,6 +241,7 @@ public class betAndStats {
         }
     }
 
+    // to determine winer and add/ decuct from balance
     public void horseWon(Horse winningHorse) {
         
             int totalBetAmount = 0;
