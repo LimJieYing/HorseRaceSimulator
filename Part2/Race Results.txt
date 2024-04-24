@@ -1,0 +1,45 @@
+Length of track: 10m 
+The winner: cOW
+confidence: 0.6
+distance travelled: 10
+Time taken: 2.145 seconds
+Speed: 4.66m/s
+The  other horses' stats are: 
+Frank (^)  has a confidence of 0.2 and travelled a distance of 7 with a speed of 3.26m/s.
+---------------------------------------------------------------------------------------------------------------------
+Length of track: 10m 
+The winner: Frank
+confidence: 0.2
+distance travelled: 10
+Time taken: 129.927 seconds
+Speed: 0.08m/s
+The  other horses' stats are: 
+cOW ($)  has a confidence of 0.7 and travelled a distance of 6 with a speed of 0.05m/s.
+---------------------------------------------------------------------------------------------------------------------
+Length of track: 10m 
+The winner: cOW
+confidence: 0.6
+distance travelled: 10
+Time taken: 187.22 seconds
+Speed: 0.05m/s
+The  other horses' stats are: 
+Frank (^)  has a confidence of 0.3 and travelled a distance of 7 with a speed of 0.04m/s.
+---------------------------------------------------------------------------------------------------------------------
+Length of track: 10m 
+The winner: naMe
+confidence: 0
+distance travelled: 10
+Time taken: 6.184 seconds
+Speed: 1.62m/s
+The  other horses' stats are: 
+climb 10 ($)  has a confidence of 1.0 and travelled a distance of 1 with a speed of 0.16m/s.
+---------------------------------------------------------------------------------------------------------------------
+Length of track: 10m 
+The winner: Dan
+confidence: 0
+distance travelled: 10
+Time taken: 6.194 seconds
+Speed: 1.61m/s
+The  other horses' stats are: 
+Dave (%)  has a confidence of 1.0 and travelled a distance of 1 with a speed of 0.16m/s.
+---------------------------------------------------------------------------------------------------------------------
