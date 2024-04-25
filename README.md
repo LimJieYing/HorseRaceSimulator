@@ -3,7 +3,7 @@
 
 ## Part I
 
-A Textual based Simulator which runs in the terminal. To run the program, run the file test.java. Firstly, a new object of the class Race must be created. Upon creation, the parameters it requires(in order) are distance(int) and number of lanes(int) or distance(int), unit(String) and number of lanes(int). Next, horse objects must be created and upon creation the parameters it requires are horseSymbol(char), horseName(String) and horseConfidence(double). The confidence must be a value between 0 to 1.0.
+A Textual based Simulator which runs in the terminal. To run the program, run the file test.java. A Sample race and horse objects has been provided. Firstly, a new object of the class Race must be created. Upon creation, the parameters it requires(in order) are distance(int) and number of lanes(int) or distance(int), unit(String) and number of lanes(int). Next, horse objects must be created and upon creation the parameters it requires are horseSymbol(char), horseName(String) and horseConfidence(double). The confidence must be a value between 0 to 1.0.
 
 Then the horses must be added to the race class by calling the method addHorse. The values passed to addHorse are the horse object(which was previously created) and the laneNumber. The lane number must be less than or equal to the specified number of lanes when the Race class is created. If a horse is not added to a lane, The lane will be empty. Lastly, the method startRace can be called to start the race. It can be called multiple times to to start a race in succession to the previous race.
 
